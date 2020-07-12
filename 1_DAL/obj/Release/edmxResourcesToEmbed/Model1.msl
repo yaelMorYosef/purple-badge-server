@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PurpleBadgeModelStoreContainer" CdmEntityContainer="PurpleBadgeEntities">
+    <EntitySetMapping Name="Businesses">
+      <EntityTypeMapping TypeName="PurpleBadgeModel.Business">
+        <MappingFragment StoreEntitySet="Business">
+          <ScalarProperty Name="businessID" ColumnName="businessID" />
+          <ScalarProperty Name="businessName" ColumnName="businessName" />
+          <ScalarProperty Name="businessOwnerID" ColumnName="businessOwnerID" />
+          <ScalarProperty Name="businessPhoneNo" ColumnName="businessPhoneNo" />
+          <ScalarProperty Name="businessAddress" ColumnName="businessAddress" />
+          <ScalarProperty Name="businessCity" ColumnName="businessCity" />
+          <ScalarProperty Name="businessSpace" ColumnName="businessSpace" />
+          <ScalarProperty Name="noOfRegisters" ColumnName="noOfRegisters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessOwners">
+      <EntityTypeMapping TypeName="PurpleBadgeModel.BusinessOwner">
+        <MappingFragment StoreEntitySet="BusinessOwner">
+          <ScalarProperty Name="ownerID" ColumnName="ownerID" />
+          <ScalarProperty Name="ownerName" ColumnName="ownerName" />
+          <ScalarProperty Name="ownerPhoneNo" ColumnName="ownerPhoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessUsers">
+      <EntityTypeMapping TypeName="PurpleBadgeModel.BusinessUser">
+        <MappingFragment StoreEntitySet="BusinessUsers">
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="PurpleBadgeModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="customerPhoneNo" ColumnName="customerPhoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PurpleBadgeModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Timelines">
+      <EntityTypeMapping TypeName="PurpleBadgeModel.Timeline">
+        <MappingFragment StoreEntitySet="Timeline">
+          <ScalarProperty Name="businessID" ColumnName="businessID" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="entranceDate" ColumnName="entranceDate" />
+          <ScalarProperty Name="entranceTime" ColumnName="entranceTime" />
+          <ScalarProperty Name="exitTime" ColumnName="exitTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

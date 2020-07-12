@@ -1,0 +1,12 @@
+D:\Y&Y\YYPB\Converters\bin\Debug\Converters.dll
+D:\Y&Y\YYPB\Converters\bin\Debug\Converters.pdb
+D:\Y&Y\YYPB\Converters\bin\Debug\1_DAL.dll
+D:\Y&Y\YYPB\Converters\bin\Debug\DTO.dll
+D:\Y&Y\YYPB\Converters\bin\Debug\EntityFramework.dll
+D:\Y&Y\YYPB\Converters\bin\Debug\1_DAL.pdb
+D:\Y&Y\YYPB\Converters\bin\Debug\DTO.pdb
+D:\Y&Y\YYPB\Converters\bin\Debug\EntityFramework.xml
+D:\Y&Y\YYPB\Converters\obj\Debug\Converters.csprojResolveAssemblyReference.cache
+D:\Y&Y\YYPB\Converters\obj\Debug\Converters.dll
+D:\Y&Y\YYPB\Converters\obj\Debug\Converters.pdb
+D:\Y&Y\YYPB\Converters\bin\Debug\MessagingToolkit.QRCode.dll

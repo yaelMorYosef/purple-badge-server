@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PurpleBadgeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Business">
+    <Key>
+      <PropertyRef Name="businessID" />
+    </Key>
+    <Property Name="businessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="businessName" Type="varchar" MaxLength="50" />
+    <Property Name="businessOwnerID" Type="varchar" MaxLength="9" />
+    <Property Name="businessPhoneNo" Type="varchar" MaxLength="10" />
+    <Property Name="businessAddress" Type="varchar" MaxLength="150" />
+    <Property Name="businessCity" Type="varchar" MaxLength="25" />
+    <Property Name="businessSpace" Type="bit" />
+    <Property Name="noOfRegisters" Type="int" />
+  </EntityType>
+  <EntityType Name="BusinessOwner">
+    <Key>
+      <PropertyRef Name="ownerID" />
+    </Key>
+    <Property Name="ownerID" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="ownerName" Type="varchar" MaxLength="50" />
+    <Property Name="ownerPhoneNo" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="BusinessUsers">
+    <Key>
+      <PropertyRef Name="userName" />
+    </Key>
+    <Property Name="userName" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="userPassword" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="customerID" />
+    </Key>
+    <Property Name="customerID" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="customerPhoneNo" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Timeline">
+    <Key>
+      <PropertyRef Name="businessID" />
+      <PropertyRef Name="customerID" />
+      <PropertyRef Name="entranceDate" />
+      <PropertyRef Name="entranceTime" />
+    </Key>
+    <Property Name="businessID" Type="int" Nullable="false" />
+    <Property Name="customerID" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="entranceDate" Type="date" Nullable="false" />
+    <Property Name="entranceTime" Type="datetime" Nullable="false" />
+    <Property Name="exitTime" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Business__busine__4BAC3F29">
+    <End Role="BusinessOwner" Type="Self.BusinessOwner" Multiplicity="0..1" />
+    <End Role="Business" Type="Self.Business" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessOwner">
+        <PropertyRef Name="ownerID" />
+      </Principal>
+      <Dependent Role="Business">
+        <PropertyRef Name="businessOwnerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BusinessU__userN__4D94879B">
+    <End Role="BusinessOwner" Type="Self.BusinessOwner" Multiplicity="1" />
+    <End Role="BusinessUsers" Type="Self.BusinessUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessOwner">
+        <PropertyRef Name="ownerID" />
+      </Principal>
+      <Dependent Role="BusinessUsers">
+        <PropertyRef Name="userName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Timeline__busine__52593CB8">
+    <End Role="Business" Type="Self.Business" Multiplicity="1" />
+    <End Role="Timeline" Type="Self.Timeline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Business">
+        <PropertyRef Name="businessID" />
+      </Principal>
+      <Dependent Role="Timeline">
+        <PropertyRef Name="businessID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Timeline__custom__534D60F1">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Timeline" Type="Self.Timeline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="Timeline">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PurpleBadgeModelStoreContainer">
+    <EntitySet Name="Business" EntityType="Self.Business" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BusinessOwner" EntityType="Self.BusinessOwner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BusinessUsers" EntityType="Self.BusinessUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Timeline" EntityType="Self.Timeline" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Business__busine__4BAC3F29" Association="Self.FK__Business__busine__4BAC3F29">
+      <End Role="BusinessOwner" EntitySet="BusinessOwner" />
+      <End Role="Business" EntitySet="Business" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BusinessU__userN__4D94879B" Association="Self.FK__BusinessU__userN__4D94879B">
+      <End Role="BusinessOwner" EntitySet="BusinessOwner" />
+      <End Role="BusinessUsers" EntitySet="BusinessUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Timeline__busine__52593CB8" Association="Self.FK__Timeline__busine__52593CB8">
+      <End Role="Business" EntitySet="Business" />
+      <End Role="Timeline" EntitySet="Timeline" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Timeline__custom__534D60F1" Association="Self.FK__Timeline__custom__534D60F1">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Timeline" EntitySet="Timeline" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

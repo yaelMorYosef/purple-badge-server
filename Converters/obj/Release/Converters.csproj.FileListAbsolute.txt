@@ -1,0 +1,15 @@
+D:\Y&Y\YYPB\Converters\bin\Release\Converters.dll
+D:\Y&Y\YYPB\Converters\bin\Release\Converters.pdb
+D:\Y&Y\YYPB\Converters\bin\Release\1_DAL.dll
+D:\Y&Y\YYPB\Converters\bin\Release\DTO.dll
+D:\Y&Y\YYPB\Converters\bin\Release\EntityFramework.dll
+D:\Y&Y\YYPB\Converters\bin\Release\MessagingToolkit.QRCode.dll
+D:\Y&Y\YYPB\Converters\bin\Release\1_DAL.pdb
+D:\Y&Y\YYPB\Converters\bin\Release\DTO.pdb
+D:\Y&Y\YYPB\Converters\bin\Release\EntityFramework.xml
+D:\Y&Y\YYPB\Converters\obj\Release\Converters.dll
+D:\Y&Y\YYPB\Converters\obj\Release\Converters.pdb
+D:\Y&Y\YYPB\Converters\bin\Release\1_DAL.dll.config
+D:\Y&Y\YYPB\Converters\obj\Release\Converters.csprojAssemblyReference.cache
+D:\Y&Y\YYPB\Converters\obj\Release\Converters.csproj.CoreCompileInputs.cache
+D:\Y&Y\YYPB\Converters\obj\Release\Converters.csproj.CopyComplete

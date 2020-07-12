@@ -1,0 +1,14 @@
+D:\Y&Y\YYPB\2_BLL\bin\Debug\2_BLL.dll
+D:\Y&Y\YYPB\2_BLL\bin\Debug\2_BLL.pdb
+D:\Y&Y\YYPB\2_BLL\bin\Debug\1_DAL.dll
+D:\Y&Y\YYPB\2_BLL\bin\Debug\Converters.dll
+D:\Y&Y\YYPB\2_BLL\bin\Debug\DTO.dll
+D:\Y&Y\YYPB\2_BLL\bin\Debug\EntityFramework.dll
+D:\Y&Y\YYPB\2_BLL\bin\Debug\1_DAL.pdb
+D:\Y&Y\YYPB\2_BLL\bin\Debug\Converters.pdb
+D:\Y&Y\YYPB\2_BLL\bin\Debug\DTO.pdb
+D:\Y&Y\YYPB\2_BLL\bin\Debug\EntityFramework.xml
+D:\Y&Y\YYPB\2_BLL\obj\Debug\2_BLL.csprojResolveAssemblyReference.cache
+D:\Y&Y\YYPB\2_BLL\obj\Debug\2_BLL.dll
+D:\Y&Y\YYPB\2_BLL\obj\Debug\2_BLL.pdb
+D:\Y&Y\YYPB\2_BLL\bin\Debug\MessagingToolkit.QRCode.dll

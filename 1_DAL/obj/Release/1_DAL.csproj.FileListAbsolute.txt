@@ -1,0 +1,11 @@
+D:\Y&Y\YYPB\1_DAL\bin\Release\1_DAL.dll.config
+D:\Y&Y\YYPB\1_DAL\bin\Release\1_DAL.dll
+D:\Y&Y\YYPB\1_DAL\bin\Release\1_DAL.pdb
+D:\Y&Y\YYPB\1_DAL\bin\Release\EntityFramework.dll
+D:\Y&Y\YYPB\1_DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\Y&Y\YYPB\1_DAL\bin\Release\MessagingToolkit.QRCode.dll
+D:\Y&Y\YYPB\1_DAL\bin\Release\EntityFramework.xml
+D:\Y&Y\YYPB\1_DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\Y&Y\YYPB\1_DAL\obj\Release\1_DAL.csprojResolveAssemblyReference.cache
+D:\Y&Y\YYPB\1_DAL\obj\Release\1_DAL.dll
+D:\Y&Y\YYPB\1_DAL\obj\Release\1_DAL.pdb
